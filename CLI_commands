@@ -1,0 +1,54 @@
+ resource group:
+ ----------------
+  
+  az group create --name <resource-group> --location <location>
+  
+  az group create --name Digital_automation --location "eastus"
+
+Storage account:
+----------------
+	
+az storage account create --name <storage-account> --resource-group <resource-group> --location <location> --sku Standard_ZRS --encryption-services blob
+
+az storage account create --name san1 --resource-group Digital_automation --location eastus --sku Standard_ZRS --encryption-services blob
+
+create VN:
+----------
+
+az network vnet create --name myVirtualNetwork --resource-group Digital_automation --subnet-name default
+
+Create VM:
+----------
+
+az vm create --resource-group Digital_automation --name MYOWNVM --image win2016datacenter --admin-username saravanan --admin-password Anything
+
+for linux:
+-----------
+
+az vm create --resource-group Digital_automation --name MYOWNVM --image UbuntuLTS  --admin-username saravanan --admin-password Anything --generate-ssh-keys
+
+Note: make sure note down the public ip address
+
+Port open:(optional for windows)
+--------------------------------
+
+az vm open-port --port 80 --resource-group  Digital_automation --name MYOWNVM
+
+Connect to virtual machine:
+--------------------------
+
+mstsc /v:publicIpAddress
+
+mstsc /v:20.39.52.160
+
+To get the public ip address of VM:
+----------------------------------
+
+az vm show -d -g reousrceGroupName -n vmName --query publicIps -o tsv
+
+az vm show -d -g Digital_automation -n MYOWNVM --query publicIps -o tsv
+
+Clean up resource-group:
+-----------------------
+
+az group delete --name Digital_automation --yes
