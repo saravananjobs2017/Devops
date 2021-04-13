@@ -52,3 +52,5 @@ Clean up resource-group:
 -----------------------
 
 az group delete --name Digital_automation --yes
+
+---note this just file
