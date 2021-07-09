@@ -7,7 +7,7 @@ trigger:
 - master
 
 pool:
-  vmImage: 'ubuntu-latest'
+  vmImage: 'my-tpc'
 
 steps:
 - script: echo Hello, world!
