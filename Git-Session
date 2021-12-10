@@ -1,0 +1,76 @@
+Create New Projects:
+-------------------------
+Go to this page: https://start.spring.io/
+Generate new project.
+
+Source control Management:
+--------------------------
+* the practice of tracking and managing changes to code.
+* History of code development and allowing merging from multiple branches.
+
+why git and git installation:
+-----------------------------
+
+Git acts as local and remote whereas in other svn, developer has to be in online while edit and save.
+
+Installation:
+
+goto official site: https://git-scm.com/downloads
+
+after installation, Git bash and gui will be available.
+
+From local to remote:
+----------------------
+
+Git init
+
+git status
+
+git add . , git add -u (modified and deleted) , -a (created)
+
+git commit -M "message"
+
+git remote add origin <<url>>
+
+git branch -M main
+
+git push -u origin main
+
+
+To_know what are the branches under the git:
+
+Git branch -a
+
+
+PULL & PUSH:
+
+Git pull origin master
+Git push origin master
+
+
+Remote to local:
+----------------
+
+git clone url
+
+git checkout <<branch_name>>
+
+to view which branch you are : git branch 
+
+git add .
+
+git status
+
+git commit -M "message"
+
+git push origin <<branch_name>>
+
+
+
+
+
+
+
+
+
+
